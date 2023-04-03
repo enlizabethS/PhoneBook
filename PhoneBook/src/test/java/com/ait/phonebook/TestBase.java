@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -13,7 +14,7 @@ import java.util.NoSuchElementException;
 
 public class TestBase {
 
-        WebDriver driver;
+       static WebDriver driver;
 
         @BeforeSuite
         public void setUp() {
@@ -38,7 +39,7 @@ public class TestBase {
             }
         }
 
-        @AfterMethod(enabled = false)
+        @AfterSuite(enabled = false)
         public void tearDown() {
             driver.quit();
         }
