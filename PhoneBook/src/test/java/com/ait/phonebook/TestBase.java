@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 import java.util.NoSuchElementException;
@@ -14,7 +15,7 @@ public class TestBase {
 
         WebDriver driver;
 
-        @BeforeMethod
+        @BeforeSuite
         public void setUp() {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("remote-allow-origins=*");
