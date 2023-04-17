@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-17T16:18:23" hostname="MacBook-Air-Elizaveta.local" time="1.177">
+  <properties/>
+  <testcase name="loginRegisteredUserPositiveTest" classname="com.ait.tests.LoginTests" time="1.177"/>
+  <system-out><![CDATA[19:18:13.284 [Test worker] INFO  com.ait.tests.TestBase -- Start testloginRegisteredUserPositiveTest with data: []
+19:18:24.599 [Test worker] INFO  com.ait.tests.TestBase -- User logged in. Actual result: true. Expected result: true
+19:18:24.601 [Test worker] INFO  com.ait.tests.TestBase -- PASSED: loginRegisteredUserPositiveTest
+19:18:24.602 [Test worker] INFO  com.ait.tests.TestBase -- ===========================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

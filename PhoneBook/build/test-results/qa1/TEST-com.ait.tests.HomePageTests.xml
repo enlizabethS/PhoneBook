@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.tests.HomePageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-17T16:17:57" hostname="MacBook-Air-Elizaveta.local" time="0.034">
+  <properties/>
+  <testcase name="openHomePageTest" classname="com.ait.tests.HomePageTests" time="0.034"/>
+  <system-out><![CDATA[19:17:57.081 [Test worker] INFO  com.ait.tests.TestBase -- Start testopenHomePageTest with data: []
+19:17:57.120 [Test worker] INFO  com.ait.tests.TestBase -- PASSED: openHomePageTest
+19:17:57.121 [Test worker] INFO  com.ait.tests.TestBase -- ===========================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
