@@ -1,5 +1,4 @@
-package com.ait.phonebook;
-
+package com.ait.tests;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -9,18 +8,16 @@ import org.testng.annotations.Test;
 public class HeaderTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!isElementPresent(
+        if (!app.getHeader().isElementPresent(
                 By.cssSelector("div.navbar-component_nav__1X_4m a[href='/login']"))
         ) {
-            driver.findElement(
-                    By.xpath("//button[contains(.,'Sign Out')]")
-            ).click();
+            app.getHeader().clickOnSignOutButton();
         }
     }
     @Test
     public void checkHeaderLogoTest() {
         Assert.assertTrue(
-                isElementPresent(
+                app.getHeader().isElementPresent(
                         By.xpath("//div[@class='navbar-component_nav__1X_4m']/h1[contains(.,'PHONEBOOK')]")
                 )
         );
@@ -28,7 +25,7 @@ public class HeaderTests extends TestBase {
     @Test
     public void checkHeaderHomeLinkTest() {
         Assert.assertTrue(
-                isElementPresent(
+                app.getHeader().isElementPresent(
                         By.cssSelector("div.navbar-component_nav__1X_4m a[href='/home']")
                 )
         );
@@ -36,7 +33,7 @@ public class HeaderTests extends TestBase {
     @Test
     public void checkHeaderAboutLinkTest() {
         Assert.assertTrue(
-                isElementPresent(
+                app.getHeader().isElementPresent(
                         By.cssSelector("div.navbar-component_nav__1X_4m a[href='/about']")
                 )
         );
@@ -44,7 +41,7 @@ public class HeaderTests extends TestBase {
     @Test
     public void checkHeaderLoginLinkTest() {
         Assert.assertTrue(
-                isElementPresent(
+                app.getHeader().isElementPresent(
                         By.cssSelector("div.navbar-component_nav__1X_4m a[href='/login']")
                 )
         );

@@ -1,5 +1,6 @@
-package com.ait.phonebook;
+package com.ait.tests;
 
+import com.ait.tests.model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,23 +9,24 @@ public class CreateAccountTests extends TestBase {
     //precondition: user should be logged out
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!isLoginLinkPresent()) {
-            clickOnSignOutButton();
+        if (!app.getHeader().isLoginLinkPresent()) {
+            app.getHeader().clickOnSignOutButton();
         }
     }
 
     @Test(enabled = false)
     public void newUserRegistrationPositiveTest() {
         //click on Login link
-        clickOnLoginLink();
+        app.getHeader().clickOnLoginLink();
         //verify Registration form is displayed
-        Assert.assertTrue(isLoginRegFormPresent());
+        Assert.assertTrue(app.getUser().isLoginRegFormPresent());
         //fill registration form
-        fillLoginRegForm("elisaveta.stepura@mail.ru", "Liza159357!");
+        app.getUser().fillLoginRegForm(new User().setEmail("elisaveta.stepura@mail.ru")
+                .setPassword("Liza159357!"));
         //click on Registration button
-        clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
         //verify Log out button is displayed
-        Assert.assertTrue(isSignOutButtonPresent());
+        Assert.assertTrue(app.getHomePage().isHomeComponentPresent());
     }
 
 }
